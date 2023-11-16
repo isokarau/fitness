@@ -1,5 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:fitness/core/const/color_constants.dart';
+import 'package:fitness/input_page.dart';
+import 'package:fitness/screens/onboarding/page/obboarding_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -27,35 +30,16 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Fitness',
       theme: ThemeData(
-        // textTheme:
-        //     TextTheme(bodyText1: TextStyle(color: ColorConstants.textColor)),
-        // fontFamily: 'NotoSansKR',
+        textTheme: const TextTheme(
+          bodyLarge: TextStyle(color: ColorConstants.textColor),
+        ),
+        fontFamily: 'NotoSansKR',
         scaffoldBackgroundColor: Colors.white,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       // home: isLoggedIn ? TabBarPage() : OnboardingPage(),
-      home: InputPage(),
-    );
-  }
-}
-
-class InputPage extends StatefulWidget {
-  @override
-  _InputPageState createState() => _InputPageState();
-}
-
-class _InputPageState extends State<InputPage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('BMI CALCULATOR'),
-      ),
-      body: const Column(
-        children: [
-          Text('Hello world!'),
-        ],
-      ),
+      home:
+          OnboardingPage(), // TODO home: isLoggedIn ? TabBarPage() : OnboardingPage(),
     );
   }
 }
