@@ -1,6 +1,7 @@
 import 'package:fitness/input_page.dart';
 import 'package:fitness/screens/onboarding/bloc/onboarding_bloc.dart';
 import 'package:fitness/screens/onboarding/widget/onboarding_content.dart';
+import 'package:fitness/screens/sign_up/page/sign_up_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -21,7 +22,7 @@ class OnboardingPage extends StatelessWidget {
           Navigator.of(context).pushReplacement(
             MaterialPageRoute(
               builder: (_) {
-                return InputPage(); // TODO return SignUpPage();
+                return SignUpPage();
               },
             ),
           );
