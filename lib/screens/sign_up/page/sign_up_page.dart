@@ -1,4 +1,5 @@
 import 'package:fitness/input_page.dart';
+import 'package:fitness/screens/sign_in/page/sign_in_page.dart';
 import 'package:fitness/screens/sign_up/bloc/sign_up_bloc.dart';
 import 'package:fitness/screens/sign_up/widget/sign_up_content.dart';
 import 'package:flutter/material.dart';
@@ -29,8 +30,7 @@ class SignUpPage extends StatelessWidget {
           } else if (state is NextSignInPageState) {
             Navigator.of(context).pushReplacement(
               MaterialPageRoute(
-                builder: (_) =>
-                    InputPage(), // TODO builder: (_) => SignInPage(),
+                builder: (_) => const SignInPage(),
               ),
             );
           } else if (state is ErrorState) {

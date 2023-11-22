@@ -34,4 +34,10 @@ class TextConstants {
   static const String confirmPasswordErrorText = 'Password is not the same';
 
   static const String alreadyHaveAccount = "Already have an account?";
+
+  // Sing In
+  static const String passwordPlaceholderSignIn = "Enter your password";
+  static const String forgotPassword = "Forgot password?";
+
+  static const String doNotHaveAnAccount = "Do not have an account?";
 }
