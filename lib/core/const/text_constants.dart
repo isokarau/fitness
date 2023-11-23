@@ -40,4 +40,9 @@ class TextConstants {
   static const String forgotPassword = "Forgot password?";
 
   static const String doNotHaveAnAccount = "Do not have an account?";
+
+  // Tab bar
+  static const String homeIcon = "Home";
+  static const String workoutsIcon = "Workouts";
+  static const String settingsIcon = "Settings";
 }

@@ -2,6 +2,7 @@ import 'package:fitness/input_page.dart';
 import 'package:fitness/screens/sign_in/page/sign_in_page.dart';
 import 'package:fitness/screens/sign_up/bloc/sign_up_bloc.dart';
 import 'package:fitness/screens/sign_up/widget/sign_up_content.dart';
+import 'package:fitness/screens/tab_bar/page/tab_bar_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -22,10 +23,7 @@ class SignUpPage extends StatelessWidget {
         listener: (context, state) {
           if (state is NextTabBarPageState) {
             Navigator.of(context).pushReplacement(
-              MaterialPageRoute(
-                builder: (_) =>
-                    InputPage(), // TODO builder: (_) => TabBarPage()
-              ),
+              MaterialPageRoute(builder: (_) => InputPage()),
             );
           } else if (state is NextSignInPageState) {
             Navigator.of(context).pushReplacement(

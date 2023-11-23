@@ -2,6 +2,7 @@ import 'package:fitness/input_page.dart';
 import 'package:fitness/screens/sign_in/bloc/sign_in_bloc.dart';
 import 'package:fitness/screens/sign_in/widget/sign_in_content.dart';
 import 'package:fitness/screens/sign_up/page/sign_up_page.dart';
+import 'package:fitness/screens/tab_bar/page/tab_bar_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -21,7 +22,7 @@ class SignInPage extends StatelessWidget {
       child: BlocConsumer<SignInBloc, SignInState>(
         buildWhen: (_, currState) => currState is SignInInitial,
         builder: (context, state) {
-          return SignInContent();
+          return const SignInContent();
         },
         listenWhen: (_, currState) =>
             currState is NextForgotPasswordPageState ||
@@ -34,13 +35,22 @@ class SignInPage extends StatelessWidget {
                 builder: (_) => InputPage())); // TODO ForgotPasswordPage()
           } else if (state is NextSignUpPageState) {
             Navigator.pushReplacement(
-                context, MaterialPageRoute(builder: (_) => SignUpPage()));
+              context,
+              MaterialPageRoute(
+                builder: (_) => SignUpPage(),
+              ),
+            );
           } else if (state is NextTabBarPageState) {
-            Navigator.of(context).pushReplacement(MaterialPageRoute(
-                builder: (_) => InputPage())); // TODO TabBarPage()
+            Navigator.of(context).pushReplacement(
+              MaterialPageRoute(
+                builder: (_) => const TabBarPage(),
+              ),
+            );
           } else if (state is ErrorState) {
             ScaffoldMessenger.of(context).showSnackBar(
-              SnackBar(content: Text(state.message)),
+              SnackBar(
+                content: Text(state.message),
+              ),
             );
           }
         },

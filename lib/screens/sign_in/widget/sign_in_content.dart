@@ -129,9 +129,9 @@ class SignInContent extends StatelessWidget {
   Widget _createForgotPasswordButton(BuildContext context) {
     final bloc = BlocProvider.of<SignInBloc>(context);
     return GestureDetector(
-      child: Padding(
-        padding: const EdgeInsets.only(left: 21),
-        child: const Text(
+      child: const Padding(
+        padding: EdgeInsets.only(left: 21),
+        child: Text(
           TextConstants.forgotPassword,
           style: TextStyle(
             fontSize: 16,

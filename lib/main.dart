@@ -3,6 +3,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:fitness/core/const/color_constants.dart';
 import 'package:fitness/input_page.dart';
 import 'package:fitness/screens/onboarding/page/obboarding_page.dart';
+import 'package:fitness/screens/tab_bar/page/tab_bar_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -37,9 +38,7 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Colors.white,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      // home: isLoggedIn ? TabBarPage() : OnboardingPage(),
-      home:
-          OnboardingPage(), // TODO home: isLoggedIn ? TabBarPage() : OnboardingPage(),
+      home: isLoggedIn ? const TabBarPage() : OnboardingPage(),
     );
   }
 }
