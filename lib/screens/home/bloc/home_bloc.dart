@@ -46,8 +46,8 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
         .where((w) =>
             (w.currentProgress ?? 0) > 0 && w.currentProgress == w.progress)
         .toList();
-    final percent01 = 5; // TODO uncomment and remove 5
-    // completed.length.toDouble() / DataConstants.workouts.length.toDouble();
+    final percent01 =
+        completed.length.toDouble() / DataConstants.workouts.length.toDouble();
     final percent = (percent01 * 100).toInt();
     return percent;
   }
