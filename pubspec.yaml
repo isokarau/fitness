@@ -21,6 +21,9 @@ dependencies:
 
   flutter_secure_storage: ^9.0.0
 
+  chewie: ^1.7.4
+  sliding_up_panel: ^2.0.0+1
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

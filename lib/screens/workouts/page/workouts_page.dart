@@ -1,3 +1,7 @@
+import 'package:fitness/input_page.dart';
+import 'package:fitness/screens/workout_details/page/workout_details_page.dart';
+import 'package:fitness/screens/workouts/bloc/workouts_bloc.dart';
+import 'package:fitness/screens/workouts/widget/workout_content.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

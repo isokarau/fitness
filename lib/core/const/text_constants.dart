@@ -73,7 +73,7 @@ class TextConstants {
   static const String armsExercises = "6";
   static const String armsMinutes = "35";
 
-   //Workout screen -> yoga card
+  //Workout screen -> yoga card
   static const String yogaTitle = "Yoga";
   static const String yogaExercises = "16";
   static const String yogaMinutes = "52";
@@ -123,7 +123,8 @@ class TextConstants {
   static const String nextExercise = "Next Exercise:";
 
   // Start Workout screen -> Warrior II Pose
-  static const String warriorDescription = "Named for a fierce warrior, an incarnation of Shiva, this version of Warrior Pose increases stamina.";
+  static const String warriorDescription =
+      "Named for a fierce warrior, an incarnation of Shiva, this version of Warrior Pose increases stamina.";
   static const String warriorStep1 =
       "Stand in Tadasana (Mountain Pose). Raise your arms parallel to the floor and reach them actively out to the sides, shoulder blades wide, palms down.";
   static const String warriorStep2 =
@@ -149,12 +150,14 @@ class TextConstants {
   static const String editAccount = 'Edit account';
   static const String editPhoto = 'Edit photo';
   static const String fullName = 'Full name';
-  static const String nameShouldContain2Char = 'Name should contain at least 2 characters';
+  static const String nameShouldContain2Char =
+      'Name should contain at least 2 characters';
   static const String changePassword = 'Change Password';
 
   // Edit account screen -> show settings
   static const String cameraPermission = 'Camera permisson';
-  static const String cameAccess = 'This app needs camera access to take pictures for upload user profile photo';
+  static const String cameAccess =
+      'This app needs camera access to take pictures for upload user profile photo';
   static const String deny = 'Deny';
   static const String settings = 'Settings';
   static const String fullNamePlaceholder = 'Enter your full name';
@@ -166,11 +169,15 @@ class TextConstants {
   //Forgot password screen
   static const passwordReset = 'Password Reset';
   static const sendActivationBuild = 'Send Activation Link';
-  static const resetPasswordLinkWasSent = 'Reset password link was sent on your email.';
+  static const resetPasswordLinkWasSent =
+      'Reset password link was sent on your email.';
 
   // Unknown
   static const String didYouKnow = "Did you know...";
   static const String sportActivity = "Sport activity improves memory!";
   static const String signToStart = "Sooo, it's time to start right now!";
   static const String startWorkout = "Start workout!";
+  static const String start = "start";
+  static const String continueT = "continueT";
+  static const String finish = "finish";
 }

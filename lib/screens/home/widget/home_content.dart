@@ -8,6 +8,7 @@ import 'package:fitness/screens/common_widgets/fitness_button.dart';
 import 'package:fitness/screens/home/bloc/home_bloc.dart';
 import 'package:fitness/screens/home/widget/home_statistics.dart';
 import 'package:fitness/screens/tab_bar/bloc/tab_bar_bloc.dart';
+import 'package:fitness/screens/workouts/widget/workout_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -214,29 +215,28 @@ class HomeContent extends StatelessWidget {
           height: 160,
           child: ListView(
             scrollDirection: Axis.horizontal,
-            children: const [
-              const SizedBox(width: 20),
-              Text('suka'), // TODO remove
-              // WorkoutCard(
+            children: [
+              SizedBox(width: 20),
+              // WorkoutCard( 
               //     color: ColorConstants.cardioColor,
               //     workout: DataConstants.workouts[0],
               //     onTap: () => Navigator.of(context).push(MaterialPageRoute(
               //         builder: (_) => WorkoutDetailsPage(
               //             workout: DataConstants.workouts[0])))),
-              const SizedBox(width: 15),
-              Text('suka'), // TODO remove
-              // WorkoutCard(
-              //   color: ColorConstants.armsColor,
-              //   workout: DataConstants.workouts[2],
-              //   onTap: () => Navigator.of(context).push(
-              //     MaterialPageRoute(
-              //       builder: (_) => WorkoutDetailsPage(
-              //         workout: DataConstants.workouts[2],
-              //       ),
-              //     ),
-              //   ),
-              // ),
-              const SizedBox(width: 20),
+              SizedBox(width: 15),
+              WorkoutCard(
+                // color: ColorConstants.armsColor, // TODO
+                workout: DataConstants.workouts[2],
+                // TODO
+                // onTap: () => Navigator.of(context).push(
+                //   MaterialPageRoute(
+                //     builder: (_) => WorkoutDetailsPage(
+                //       workout: DataConstants.workouts[2],
+                //     ),
+                //   ),
+                // ),
+              ),
+              SizedBox(width: 20),
             ],
           ),
         ),
