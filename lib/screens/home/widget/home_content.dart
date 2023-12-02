@@ -5,6 +5,7 @@ import 'package:fitness/core/const/text_constants.dart';
 import 'package:fitness/data/workout_data.dart';
 import 'package:fitness/input_page.dart';
 import 'package:fitness/screens/common_widgets/fitness_button.dart';
+import 'package:fitness/screens/edit_account/edit_account_screen.dart';
 import 'package:fitness/screens/home/bloc/home_bloc.dart';
 import 'package:fitness/screens/home/widget/home_statistics.dart';
 import 'package:fitness/screens/tab_bar/bloc/tab_bar_bloc.dart';
@@ -105,21 +106,17 @@ class HomeContent extends StatelessWidget {
                           ),
                         ),
                       ),
-                onTap: () {
-                  // TODO
-                  // Navigator.of(context).push(
-                  //     MaterialPageRoute(builder: (_) => EditAccountScreen()));
-                  // BlocProvider.of<HomeBloc>(context).add(ReloadImageEvent());
-                  Navigator.of(context)
-                      .push(MaterialPageRoute(builder: (_) => InputPage()));
-                  BlocProvider.of<HomeBloc>(context).add(ReloadImageEvent());
-                },
-                // TODO
-                // onTap: () async {
-                //   await Navigator.of(context).push(
+                // onTap: () {
+                //   Navigator.of(context).push(
                 //       MaterialPageRoute(builder: (_) => EditAccountScreen()));
                 //   BlocProvider.of<HomeBloc>(context).add(ReloadImageEvent());
                 // },
+                // TODO
+                onTap: () async {
+                  await Navigator.of(context).push(
+                      MaterialPageRoute(builder: (_) => EditAccountScreen()));
+                  BlocProvider.of<HomeBloc>(context).add(ReloadImageEvent());
+                },
               );
             },
           ),

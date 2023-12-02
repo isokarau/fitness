@@ -7,6 +7,7 @@ import 'package:fitness/core/const/text_constants.dart';
 import 'package:fitness/core/service/auth_service.dart';
 import 'package:fitness/input_page.dart';
 import 'package:fitness/screens/common_widgets/settings_container.dart';
+import 'package:fitness/screens/edit_account/edit_account_screen.dart';
 import 'package:fitness/screens/settings/bloc/settings_bloc.dart';
 import 'package:fitness/screens/sign_in/page/sign_in_page.dart';
 import 'package:flutter/foundation.dart';
@@ -87,9 +88,7 @@ class _SettingsScreenState extends State {
                     await Navigator.push(
                       context,
                       MaterialPageRoute(
-                        // TODO
-                        builder: (context) => InputPage(),
-                        // builder: (context) => EditAccountScreen(),
+                        builder: (context) => EditAccountScreen(),
                       ),
                     );
                     setState(() {
@@ -209,7 +208,7 @@ class _SettingsScreenState extends State {
                 TextButton(
                     onPressed: () => launch('https://twitter.com/perpetio'),
                     style: TextButton.styleFrom(
-                        shape: CircleBorder(),
+                        shape: const CircleBorder(),
                         backgroundColor: Colors.white,
                         elevation: 1),
                     child: Image.asset(PathConstants.twitter)),
