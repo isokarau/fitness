@@ -3,6 +3,7 @@ import 'package:fitness/core/const/path_constants.dart';
 import 'package:fitness/core/const/text_constants.dart';
 import 'package:fitness/input_page.dart';
 import 'package:fitness/screens/home/page/home_page.dart';
+import 'package:fitness/screens/settings/settings_screen.dart';
 import 'package:fitness/screens/tab_bar/bloc/tab_bar_bloc.dart';
 import 'package:fitness/screens/workouts/page/workouts_page.dart';
 import 'package:flutter/material.dart';
@@ -68,8 +69,7 @@ class TabBarPage extends StatelessWidget {
     final children = [
       const HomePage(),
       const WorkoutsPage(),
-      const HomePage(),
-      // const SettingsScreen(), // TODO
+      const SettingsScreen(),
     ];
     return children[index];
   }

@@ -216,27 +216,27 @@ class HomeContent extends StatelessWidget {
           child: ListView(
             scrollDirection: Axis.horizontal,
             children: [
-              SizedBox(width: 20),
-              // WorkoutCard( 
+              const SizedBox(width: 20),
+              // WorkoutCard(
               //     color: ColorConstants.cardioColor,
               //     workout: DataConstants.workouts[0],
               //     onTap: () => Navigator.of(context).push(MaterialPageRoute(
               //         builder: (_) => WorkoutDetailsPage(
               //             workout: DataConstants.workouts[0])))),
-              SizedBox(width: 15),
-              WorkoutCard(
-                // color: ColorConstants.armsColor, // TODO
-                workout: DataConstants.workouts[2],
-                // TODO
-                // onTap: () => Navigator.of(context).push(
-                //   MaterialPageRoute(
-                //     builder: (_) => WorkoutDetailsPage(
-                //       workout: DataConstants.workouts[2],
-                //     ),
-                //   ),
-                // ),
-              ),
-              SizedBox(width: 20),
+              const SizedBox(width: 15),
+              // WorkoutCard(
+              //   color: ColorConstants.armsColor, // TODO
+              //   workout: DataConstants.workouts[2],
+              //   // TODO
+              //   // onTap: () => Navigator.of(context).push(
+              //   //   MaterialPageRoute(
+              //   //     builder: (_) => WorkoutDetailsPage(
+              //   //       workout: DataConstants.workouts[2],
+              //   //     ),
+              //   //   ),
+              //   // ),
+              // ),
+              const SizedBox(width: 20),
             ],
           ),
         ),
